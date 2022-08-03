@@ -6,6 +6,10 @@
   "name": "Nobuyori Takahashi",
   "email": "voltrue2@yahoo.com"
  },
+ "publishConfig": {
+  "access": "public"
+ },
+
  "private": false,
  "repository": {
   "type": "git",
