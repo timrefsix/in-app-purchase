@@ -4,7 +4,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
         with:
@@ -12,7 +12,8 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
           scope: '@timrefsix'
-      - run: echo "Building"
+      - name:  'Automated Github Action Version Bump'
+        uses:  'rimonhanna/gh-action-bump-version@master'
       - run: npm ci
       - run: npm publish
         env:
