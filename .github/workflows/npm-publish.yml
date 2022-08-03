@@ -13,6 +13,7 @@ jobs:
           scope: '@timrefsix'
       - name:  'Automated Github Action Version Bump'
         uses:  'rimonhanna/gh-action-bump-version@master'
+      - run: npm whoami
       - run: npm ci
       - run: npm publish --access public
         env:
